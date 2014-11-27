@@ -5,14 +5,14 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'marionette',
-], function($, _, Backbone, Marionette){
-  var SearchItem = Backbone.Marionette.Model.extend({
+], function($, _, Backbone){
+  var Item = Backbone.Model.extend({
     defaults: {
       // TODO: 属性は要変更
-      type: 'Attr1',
+      type_code: 'code1',
+      type_name: '取引企業名',
       value: '',
     }
   });
-  return SearchItem;
+  return Item;
 });

@@ -8,7 +8,10 @@ require.config({
   	underscore : 'vendor/js/underscore-min',
     backbone : 'vendor/js/backbone-min',
     marionette : 'vendor/js/backbone.marionette.min',
+  	text: 'js/text',
   	applications: 'js/applications',
+  	models: 'js/models',
   	views: 'js/views',
+  	templates: 'js/templates',
   },
 });
