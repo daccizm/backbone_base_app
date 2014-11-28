@@ -1,0 +1,29 @@
+[
+  {
+    "fixed_attr1": "Attr11",
+    "fixed_attr2": "Attr12",
+    "fixed_attr3": "Attr13",
+    "fixed_attr4": "Attr14",
+    "variable_attr5": "Attr15",
+    "variable_attr6": "Attr16",
+    "variable_attr7": "Attr17"
+  },
+  {
+    "fixed_attr1": "Attr21",
+    "fixed_attr2": "Attr22",
+    "fixed_attr3": "Attr23",
+    "fixed_attr4": "Attr24",
+    "variable_attr5": "Attr25",
+    "variable_attr6": "Attr26",
+    "variable_attr7": "Attr27"
+  },
+  {
+    "fixed_attr1": "Attr31",
+    "fixed_attr2": "Attr32",
+    "fixed_attr3": "Attr33",
+    "fixed_attr4": "Attr34",
+    "variable_attr5": "Attr35",
+    "variable_attr6": "Attr36",
+    "variable_attr7": "Attr37"
+  }
+]

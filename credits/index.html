@@ -3,22 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Sample</title>
-    <script data-main="../assets/js/apps/credits/index.js" src="../assets/vendor/js/require.min.js"></script>
+    <script data-main="../assets/js/apps/credits/index/app.js" src="../assets/vendor/js/require.min.js"></script>
+    <link href="../assets/vendor/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
+
+    <div id="header-region"></div>
+
     <div id="container">
 
-      <div id="header"></div>
+      <div id="search-region"></div>
 
-      <div id="credits">
+      <div id="result-region"></div>
 
-        <div id="search-region"></div>
-
-        <div id="result-region"></div>
-
-      </div>
-
-      <div id="footer"></div>
     </div>
+
+    <div id="footer-region"></div>
+
+    <script type="text/template" id="modalBodyTemplate">
+      <p>リセットしますか？</p>
+    </script>
+
+    <script type="text/template" id="modalResetAfterBodyTemplate">
+      <p>リセットしました。</p>
+    </script>
+
+    <script type="text/template" id="modalFooterTemplate">
+      <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+      <button type="button" id="reset-item" class="btn btn-primary">リセット</button>
+    </script>
+
+    <script type="text/template" id="modalResetAfterFooterTemplate">
+      <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+    </script>
+
   </body>
 </html>
