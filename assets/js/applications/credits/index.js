@@ -6,15 +6,8 @@ define([
   'underscore',
   'backbone',
   'marionette',
-  'models/credits/search/text_item',
-  'models/credits/search/text_collection',
-  'views/credits/index/search/text_item',
-  'views/credits/index/search/text_add_item',
-  'views/credits/index/search/text_collection',
   'views/credits/index/search/layout',
-], function( $, _, Backbone, Marionette, SearchTextItem, SearchTextCollection, SearchTextItemView, SearchTextAddItemView, SearchTextCollectionView, SearchLayoutView ){
-//   'views/credits/index/search/text_collection',
-// ], function( $, _, Backbone, Marionette, SearchTextCollectionView, SearchLayoutView ){
+], function( $, _, Backbone, Marionette, SearchLayoutView ){
 
   app = new Marionette.Application();
 
@@ -26,13 +19,6 @@ define([
   /** 検索条件領域の初期処理 */
   app.addInitializer(function(){
     var layout = new SearchLayoutView();
-    // var item = new SearchTextItem();
-    // var collection = new SearchTextCollection([item.toJSON()]);
-    // var addItemView = new SearchTextAddItemView({collection: collection});
-    // var collectionView = new SearchTextCollectionView({collection: collection});
-    // var layout = new SearchLayoutView({collectionView: collectionView});
-    // layout.searchText.show(collectionView);
-    // console.log(this);
     app.search.show(layout);
   });
 

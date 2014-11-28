@@ -2,7 +2,7 @@
  * 基本設定
  */
 require.config({
-  baseUrl: '/assets',
+  baseUrl: '../assets',
   paths : {
   	jquery : 'vendor/js/jquery-1.11.1.min',
   	underscore : 'vendor/js/underscore-min',

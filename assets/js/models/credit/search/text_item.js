@@ -2,10 +2,7 @@
  * Model（検索項目）
  */
 define([
-  'jquery',
-  'underscore',
-  'backbone',
-], function($, _, Backbone){
+], function(){
   var Item = Backbone.Model.extend({
     defaults: {
       // TODO: 属性は要変更
