@@ -2,26 +2,26 @@
  * ItemView（検索項目追加）
  */
 define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'marionette',
-  'models/credits/search/text_item',
-], function($, _, Backbone, Marionette, SearchTextItem){
+  'models/credit/search/text_item',
+  'models/credit/search/text_collection',
+], function(SearchTextItem, SearchTextCollection){
   var ItemView = Marionette.ItemView.extend({
     template: false,
     el: '#search-text-action',
     ui: {
-      btn: '#add-text-item',
+      add: '#add-text-item',
+      remove: '.delete',
     },
     events: {
-      'click @ui.btn': 'add_search_text_item',
+      'click @ui.add': 'add_item',
+      'click @ui.remove': 'delete_item',
     },
-    add_search_text_item: function() {
-      alert();
-      // var item = new SearchTextItem();
-      // this.collection.add(item);
-      // console.log(this.collection)
+    add_item: function() {
+      this.collection.add(new SearchTextItem());
+    },
+    delete_item: function() {
+      console.log(this.collection);
+      // this.collection.remove();
     },
   });
 

@@ -2,21 +2,17 @@
  * Model（取引）
  */
 define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'marionette',
-], function($, _, Backbone, Marionette){
-  var Credit = Backbone.Marionette.Model.extend({
+], function(){
+  var Credit = Backbone.Model.extend({
     defaults: {
       // TODO: 属性は要変更
-      attr1: 'Attr1',
-      attr2: 'Attr2',
-      attr3: 'Attr3',
-      attr4: 'Attr4',
-      attr5: 'Attr5',
-      attr6: 'Attr6',
-      attr7: 'Attr7',
+      fixed_attr1: 'Attr1',
+      fixed_attr2: 'Attr2',
+      fixed_attr3: 'Attr3',
+      fixed_attr4: 'Attr4',
+      variable_attr5: 'Attr5',
+      variable_attr6: 'Attr6',
+      variable_attr7: 'Attr7',
     }
   });
   return Credit;

@@ -8,7 +8,14 @@ define([
   var CollectionView = Marionette.CollectionView.extend({
     tagName: 'ul',
     childView: ItemView,
+    // collectionEvents: {
+    //   'add': function(){
+    //   	alert();
+    //   }
+    // },
   });
+
+
 
   return CollectionView;
 });

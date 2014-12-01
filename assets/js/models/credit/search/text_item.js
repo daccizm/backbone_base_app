@@ -6,8 +6,8 @@ define([
   var Item = Backbone.Model.extend({
     defaults: {
       // TODO: 属性は要変更
-      type_code: 'code1',
-      type_name: '取引企業名',
+      attr_code: 'fixed_attr1',
+      attr_name: '取引企業名',
       value: '',
     }
   });
