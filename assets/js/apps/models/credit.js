@@ -1,5 +1,5 @@
 /*
- * View（取引一覧）
+ * Model 取引
  */
 define([
   'manager',
@@ -9,7 +9,7 @@ define([
     Credit.Search = {};
     Credit.Search.TextItem = Backbone.Model.extend({
       defaults: {
-        // MEMO: 属性は要変更
+        // MEMO: 属性はAPIの仕様に合わせて変更すること
         attr_code: 'fixed_attr1',
         value: '',
         deletable: true,
@@ -25,7 +25,7 @@ define([
 
     Credit.Item = Backbone.Model.extend({
       defaults: {
-        // MEMO: 属性は要変更
+        // MEMO: 属性はAPIの仕様に合わせて変更すること
         fixed_attr1: '',
         fixed_attr2: '',
         fixed_attr3: '',
