@@ -77,8 +77,8 @@ define([
     var controller = new Controller();
 
     /** 検索入力（テキスト）項目の追加 */
-    controller.listenTo(controller, "search:textitem:add", function(){
-      this.textItems.add(new Manager.Models.Credit.Search.TextItem());
+    controller.textItems.listenTo(controller, "search:textitem:add", function(){
+      this.add(new Manager.Models.Credit.Search.TextItem());
     });
 
     /** 検索入力（テキスト）のリセット */
@@ -96,12 +96,12 @@ define([
 
     /** 検索入力項目のリセット時に初期項目を追加 */
     controller.textItems.listenTo(controller.textItems, 'reset', function(){
-      controller.textItems.add(new Manager.Models.Credit.Search.TextItem({deletable: false}));
+      this.add(new Manager.Models.Credit.Search.TextItem({deletable: false}));
     });
 
     /** モーダル領域生成 */
     controller.listenTo(controller, 'search:createModal', function(){
-      controller.createModalLayout();
+      this.createModalLayout();
     });
 
     Manager.Controller = controller;
