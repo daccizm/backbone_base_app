@@ -1,17 +1,29 @@
 <h2>検索条件</h2>
 
-<div id="search-text-wrapper">
-  <div id="search-text-region"></div>
-  <div id="search-text-action">
-    <input type="button" id="add-text-item" value="追加">
+<input type="button" 
+  id="collapse-search-region"
+  data-toggle="collapse"
+  data-target="#search-collapse"
+  aria-expanded="true"
+  aria-controls="search-collapse"
+  value="閉じる">
+
+<div id="search-collapse" class="collapse in">
+
+  <div id="search-text-wrapper">
+    <div id="search-text-region"></div>
+    <div id="search-text-action">
+      <input type="button" id="add-text-item" value="追加">
+    </div>
   </div>
+
+  <div id="search-date-region"></div>
+
+  <div id="search-action-region">
+    <input type="button" id="show-modal" data-toggle="modal" data-target="#reset-modal" value="リセット">
+    <input type="button" id="search-credits" value="検索">
+  </div>
+
+  <div id="modal-region"></div>
+
 </div>
-
-<div id="search-date-region"></div>
-
-<div id="search-action-region">
-  <input type="button" id="show-modal" data-toggle="modal" data-target="#reset-modal" value="リセット">
-  <input type="button" id="search-credits" value="検索">
-</div>
-
-<div id="modal-region"></div>
