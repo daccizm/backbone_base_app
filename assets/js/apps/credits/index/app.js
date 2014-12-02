@@ -1,5 +1,6 @@
 require.config({
   paths : {
+  	/** MEMO: ロードする画面に対応するアプリケーションルートパスを設定する */
   	app_root : 'js/apps/credits',
   },
 });
