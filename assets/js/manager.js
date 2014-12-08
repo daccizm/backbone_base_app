@@ -8,6 +8,8 @@ require.config({
   	underscore   : 'vendor/js/underscore-min',
     backbone     : 'vendor/js/backbone-min',
     marionette   : 'vendor/js/backbone.marionette.min',
+    backboneStickit : 'vendor/js/backbone-stickit.min',
+    backboneValidation : 'vendor/js/backbone-validation-min',
   	text         : 'vendor/js/text',
     bootstrap    : 'vendor/js/bootstrap.min',
     manager      : 'js/manager',
@@ -21,6 +23,8 @@ define([
   'underscore',
   'backbone',
   'marionette',
+  'backboneStickit',
+  'backboneValidation',
   'bootstrap',
 ], function($, _, Backbone, Marionette){
   var Manager = new Marionette.Application();

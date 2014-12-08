@@ -56,13 +56,47 @@ define([
       template: _.template(SearchTextItemTemplate),
       ui: {
         remove: '.delete',
+        input: '.text-item',
       },
       events: {
         'click @ui.remove': 'delete_item',
       },
+      bindings: {
+        '.text-item': 'value',
+        '.code-items': {
+          observe: 'attr_code',
+          selectOptions: {
+            collection: function() {
+              return [
+                {code: 'fixed_attr1', name: '固定属性１'},
+                {code: 'fixed_attr2', name: '固定属性２'},
+                {code: 'fixed_attr3', name: '固定属性３'},
+                {code: 'fixed_attr4', name: '固定属性４'},
+                {code: 'variable_attr5', name: '可変属性５'},
+                {code: 'variable_attr6', name: '可変属性６'},
+                {code: 'variable_attr7', name: '可変属性７'},
+              ]
+            },
+            labelPath: 'name',
+            valuePath: 'code',
+          }
+        }
+      },
       delete_item: function() {
         this.model.destroy();
       },
+      onRender: function(){
+        Backbone.Validation.bind(this, {
+          valid: function(view, attr) {
+            view.ui.input.popover('destroy');
+          },
+          invalid: function(view, attr, error) {
+            view.ui.input.attr('data-content', error);
+            view.ui.input.popover('show');
+          }
+        });
+        this.stickit();
+      }
     });
 
     /*

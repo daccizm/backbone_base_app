@@ -13,6 +13,19 @@ define([
         attr_code: 'fixed_attr1',
         value: '',
         deletable: true,
+      },
+      validation: {
+        // MEMO: 本開発時は名前を変更する
+        fixed_attr1: 'validateFixedAttr1',
+      },
+      validateFixedAttr1: function(value, attr, computedState) {
+        if ( computedState.attr_code !== 'fixed_attr1' ) return;
+
+        // MEMO: 必須入力チェック
+        if ( _.isEmpty(computedState.value) ) return "必ず入力してください。";
+
+        // MEMO: 検索種別固有のチェック
+        return "固定属性１の形式で入力してください。"
       }
     });
 

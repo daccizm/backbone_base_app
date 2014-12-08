@@ -91,7 +91,11 @@ define([
 
     /** 検索実行 */
     controller.listenTo(controller, "search:execute", function(){
-      this.search();
+      var valid = true;
+      this.textItems.each(function(model){
+        if ( !model.isValid(true) ) valid = false;
+      });
+      if ( valid ) this.search();
     });
 
     /** 検索入力項目のリセット時に初期項目を追加 */

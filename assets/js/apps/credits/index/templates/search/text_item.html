@@ -1,13 +1,5 @@
-<select name="attr_code">
-  <option value="fixed_attr1">固定属性1</option>
-  <option value="fixed_attr2">固定属性2</option>
-  <option value="fixed_attr3">固定属性3</option>
-  <option value="fixed_attr4">固定属性4</option>
-  <option value="variable_attr5">可変属性5</option>
-  <option value="variable_attr6">可変属性6</option>
-  <option value="variable_attr7">可変属性7</option>
-</select>
-<input type="text">
+<select name="attr_code" class="code-items"></select>
+<input type="text" class="text-item" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="">
 <% if ( deletable ) { %>
   <a href="javascript:void(0)" class="delete">×</a>
 <% } %>
